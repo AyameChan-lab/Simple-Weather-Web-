@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: url('https://images.unsplash.com/photo-1579546929518-9e396f3cc809?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8Y29sb3IlMjBiYWNrZ3JvdW5kfGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+    background-size: cover; 
+}
+
+@layer components {
+    /* App.jsx */
+    .App {
+        @apply h-screen overflow-y-hidden;
+    }
+    /* Navbar.jsx */
+    .navbar-style {
+        @apply p-2 flex justify-between items-center text-white;
+    }
+    .brand {
+        @apply font-light text-2xl flex items-center;
+    }
+    /* Search.jsx */
+    .search-box {
+        @apply flex justify-end w-96;
+    }
+    .input-style {
+        @apply bg-gray-200/50 px-2 py-2 rounded-l-xl w-3/4 focus:outline-none focus:w-full focus:bg-gray-200 duration-75 text-black;
+    }
+    .search-btn {
+        @apply bg-gray-400/50 p-3 rounded-r-lg;
+    }
+    /* Sekeleton.jsx */
+    .sekeleton-left {
+        @apply mr-10 bg-white/70 h-40 w-60 rounded-lg px-1 py-2;
+    }
+    .skel-01 {
+        @apply inline-block p-2 mx-2 my-1 w-3/4 rounded-lg bg-slate-200/70;
+    }
+    .skel-02 {
+        @apply inline-block p-1 mx-2 my-1 w-3/4 rounded-lg bg-slate-200/70;
+    }
+    .skel-02 {
+        @apply inline-block p-2 py-3 mx-2 my-1 w-52 rounded-lg bg-slate-200/70;
+    }
+   
+    .sekeleton-right {
+        @apply bg-white/70 h-40 w-60 rounded-lg px-5 py-2;
+    }
+    .in-skel-r {
+        @apply animate-pulse py-3;
+    }
+    .skel-icon {
+        @apply bg-slate-200/70 w-20 h-20 rounded-lg py-4 mx-auto;
+    }
+    .skel-04 {
+        @apply my-3 mx-auto my-1 py-1 w-3/4 rounded-lg bg-slate-200/70;
+    }
+    /* Content.jsx */
+    .content {
+        @apply text-black h-full sm:w-1/2 md:w-2/5 mx-auto flex sm:justify-between items-center;
+    }
+    .temp-display {
+        @apply sm:text-5xl md:text-6xl font-sans flex items-center font-light;
+    }
+    .more-data {
+        @apply font-light flex items-center;
+    }
+    .location {
+        @apply flex items-center;
+    }
+    /*! < sm  */
+    @media screen and (max-width: 640px){
+        /* Content.jsx */
+        .content {
+            @apply w-1/2 flex-col justify-center;
+        }
+        
+        .temp-display {
+            @apply text-4xl;
+        }
+        /* Navbae/jsx */
+        .brand {
+            @apply text-xl
+        }
+        /*  */
+        .sekeleton-right {
+            @apply my-5 ;
+        }
+    }
+
+    @media screen and (max-width:346px){
+        .more-data {
+            @apply text-xs;
+        }
+    }
+
+    @media screen and (max-width:537px){
+        .brand {
+            @apply text-xs w-96;
+        }
+    }
+}
+
